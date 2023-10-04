@@ -13,12 +13,6 @@ extern std::queue<std::string> lineQueue;  // Queue to hold lines read from the 
 extern pthread_mutex_t mutex;  // Mutex for synchronizing access to shared resources
 extern pthread_mutex_t printMutex;  // Mutex for synchronizing print operations to avoid interleaving
 
-// Function: countvocabstrings
-// Purpose:  This function is executed by a thread and is responsible for counting the number of vocabulary strings
-//           present in each line read from the input file. The results are written to an output file and progress is
-//           indicated by printing hash marks to the standard output.
-// Input:    arg - A pointer to shared data structure containing various parameters and data used by the function.
-// Output:   nullptr - Indicates that the function has completed its execution.
 void* countvocabstrings(void* arg) {
     // Cast the input argument to the correct type (SharedData)
     SharedData* data = (SharedData*) arg;
