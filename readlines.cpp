@@ -11,12 +11,6 @@ extern std::queue<std::string> lineQueue;  // Queue to hold lines read from the 
 extern pthread_mutex_t mutex;  // Mutex for synchronizing access to shared resources
 extern pthread_mutex_t printMutex;  // Mutex for synchronizing print operations to avoid interleaving
 
-// Function: readlines
-// Purpose:  This function is intended to be executed in a separate thread. It reads lines from the input file and 
-//           pushes them into a shared queue (lineQueue) to be processed by another thread. It also updates a progress 
-//           bar in the console to indicate the progress of reading lines from the file.
-// Input:    arg - A pointer to a SharedData structure that contains shared data across threads.
-// Output:   nullptr - Returns nullptr upon completion.
 void* readlines(void* arg) {
     // Cast the void pointer back to SharedData pointer
     SharedData* data = (SharedData*) arg;
