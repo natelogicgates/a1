@@ -1,0 +1,13 @@
+---
+:id: 199142652
+:submitters:
+- :name: Jeiko Santos
+  :email: jsantos0110@sdsu.edu
+- :name: Nathnael Atlaw
+  :email: natlaw3475@sdsu.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2023-10-04 00:06:18.883330000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2023-10-03 17:06:18.883330000 Z
+:status: processed
