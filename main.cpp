@@ -24,12 +24,6 @@ std::queue<std::string> lineQueue;  // Queue to hold lines read from the input f
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;  // Mutex for synchronizing access to shared resources
 pthread_mutex_t printMutex = PTHREAD_MUTEX_INITIALIZER;  // Mutex for synchronizing print operations to avoid interleaving
 
-// Function: main
-// Purpose:  The main function of the program. It initializes shared data, creates threads, and manages their execution.
-//           It also handles command-line arguments and ensures synchronized access to shared resources using mutexes.
-// Input:    argc - The number of command-line arguments.
-//           argv - An array of command-line arguments.
-// Output:   int - Returns 0 on successful execution, and 1 on error or invalid input.
 int main(int argc, char* argv[]) {
     SharedData data;  // Data structure to hold shared data across threads
     int opt;  // Variable to hold the option character during command-line argument parsing
